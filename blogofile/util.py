@@ -115,7 +115,10 @@ def blog_path_helper(path_parts):
         path_parts = (path_parts,)
     a_path = urlparse.urlsplit(config.site_url).path
     a_path = "/".join((a_path,config.blog_path))
-    a_path = a_path + "/" + "/".join(path_parts)
+    if a_path == "/":
+        a_path = a_path + "/".join(path_parts)
+    else:
+        a_path = a_path + "/" + "/".join(path_parts)
     if not a_path.startswith("/"):
         a_path = "/"+a_path
     logger.debug("ABS path: "+a_path)

@@ -8,7 +8,7 @@ __author__ = "Ryan McGuire (ryan@enigmacurry.com)"
 __date__   = "Tue Jul 28 22:03:21 2009"
 
 import os
-from .. import config
+import config
 
 __base_mako = """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
