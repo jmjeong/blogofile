@@ -121,12 +121,7 @@ class org:
         soup = BeautifulSoup(content)
 
         # the first h2 section will be used for title, category, and date
-        metalineTag = soup.find('div', {'id': 'outline-container-1'})
-        
-        if metalineTag is None:         # orgmode 4.x version
-            metalne =  soup.find('a', {'name':'sec-1'})
-        else:
-            metalne = metalineTag.h2
+        metaline = soup.find('div', {'id': 'outline-container-1'}).h2
 
         # extract title
         try:
