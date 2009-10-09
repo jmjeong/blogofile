@@ -142,6 +142,11 @@ site_css_dir = "/css"
 #### Post encoding ####
 blog_post_encoding = "utf-8"
 
+#### Post sort order ####
+# If this value is 'date', blog articles are sorted by creation time.
+# If this value is 'updated', blog articles are sorted by modification time.
+blog_post_sort_order = "date"    
+
 ######################################################################
 # Advanced Settings
 ######################################################################

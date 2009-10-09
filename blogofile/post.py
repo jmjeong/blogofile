@@ -257,7 +257,14 @@ def parse_posts(directory):
         #Exclude some posts
         if not (p.permalink == None):
             posts.append(p)
-    posts.sort(key=operator.attrgetter('date'), reverse=True)
+    if config.blog_post_sort_order == 'date':
+        posts.sort(key=operator.attrgetter('date'), reverse=True)
+        print config.blog_post_sort_order
+        print "DATE"
+    else:
+        posts.sort(key=operator.attrgetter('updated'), reverse=True)
+        print "UP-DATE"
+        
     return posts    
 
 if __name__ == '__main__':
